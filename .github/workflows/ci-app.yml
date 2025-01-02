@@ -7,24 +7,24 @@ on:
   pull_request:
     branches:
       - main
-# jobs: Определяет рабочие задачи, которые необходимо выполнить. 
-jobs: 
+# jobs: Определяет рабочие задачи, которые необходимо выполнить.
+jobs:
   build:
-# задача сборка проекта, выполняется на ubuntu
+    # задача сборка проекта, выполняется на ubuntu
     runs-on: ubuntu-latest
-# steps: шаги, чтобы выполнить задачу
+    # steps: шаги, чтобы выполнить задачу
     steps:
-      name: instal dependencies
-      run: make instal
+      - name: instal dependencies
+        run: make instal
 
-      name: run build
-      run: make build
+      - name: run build
+        run: make build
 
-      name: run test
-      run: make test
+      - name: run test
+        run: make test
 
-      name: run lint
-      run: make lint
+      - name: run lint
+        run: make lint
 
-      name: start
-      run: make start
+      - name: start
+        run: make start
