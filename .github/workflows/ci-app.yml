@@ -14,8 +14,10 @@ jobs:
     runs-on: ubuntu-latest
     # steps: шаги, чтобы выполнить задачу
     steps:
-      - name: setup
-        run: make setup
+      - name: make setup
+        run: make install
+        run: make build
+        run: make start
 
       - name: run build
         run: make build
