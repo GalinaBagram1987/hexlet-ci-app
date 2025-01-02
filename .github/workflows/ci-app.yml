@@ -14,17 +14,13 @@ jobs:
     runs-on: ubuntu-latest
     # steps: шаги, чтобы выполнить задачу
     steps:
-      - name: Checkout repository
-          uses: actions/checkout@v2
-          
-      - name: Install dependencies
-          run: make install
-
-      - name: Run build
-          run: make build
-      
-      - name: run test
-        run: make test
+       # Клонируем репозиторий
+      - uses: actions/checkout@v4
+      # Устанавливаем Node.js
+      - uses: actions/setup-node@v4
+      - run: make install
+      - run: make build
+      - run: make test
 
       - name: run lint
         run: make lint
