@@ -14,8 +14,8 @@ jobs:
     runs-on: ubuntu-latest
     # steps: шаги, чтобы выполнить задачу
     steps:
-      #- name: instal dependencies
-      #  run: make instal
+      - name: instal dependencies
+        run: make install
 
       - name: run build
         run: make build
