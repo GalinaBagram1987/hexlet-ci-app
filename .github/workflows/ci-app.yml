@@ -15,8 +15,6 @@ jobs:
     # steps: шаги, чтобы выполнить задачу
     steps:
       - name: make setup
-        run: make install
-        run: make build
         run: make start
 
       - name: run build
