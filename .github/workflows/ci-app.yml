@@ -14,12 +14,12 @@ jobs:
     runs-on: ubuntu-latest
     # steps: шаги, чтобы выполнить задачу
     steps:
-      - name: make setup
-        run: make start
+      - name: Install dependencies
+          run: make install
 
-      - name: run build
-        run: make build
-
+      - name: Run build
+          run: make build
+      
       - name: run test
         run: make test
 
